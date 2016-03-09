@@ -1,0 +1,78 @@
+/* mixins */
+/* start of lead-ad-6-secrets-lander */
+.lead-ad-6-secrets-lander {
+  font-family: 'Roboto', sans-serif;
+  color: #2c3e50;
+  line-height: 1.5; }
+
+.lead-ad-nav {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  background-color: #2c3e50;
+  color: #ffffff;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  padding: 25px 50px; }
+  .lead-ad-nav .lead-ad-logo {
+    cursor: pointer;
+    width: 150px; }
+  .lead-ad-nav .lead-ad-button {
+    border: solid 2px #ffffff;
+    border-radius: 7px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 15px; }
+    .lead-ad-nav .lead-ad-button:hover {
+      background-color: #f7931e;
+      border: solid 2px #f7931e; }
+
+.lead-ad-hero {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  padding: 50px; }
+  .lead-ad-hero .lead-ad-header {
+    border-bottom: 2px solid #2c3e50;
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    text-align: center; }
+  .lead-ad-hero .lead-ad-about-miro {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    width: 30%; }
+  .lead-ad-hero .lead-ad-miro-img {
+    border: 3px solid #2c3e50;
+    border-radius: 50%;
+    height: 200px;
+    margin: 0 auto;
+    width: 200px; }
+  .lead-ad-hero .lead-ad-MIT-logo {
+    width: 40px; }
