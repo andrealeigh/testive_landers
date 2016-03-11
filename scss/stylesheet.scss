@@ -36,6 +36,23 @@
     justify-content: $direction;
 }
 
+/* mixin for checkmarks in pricing section */
+
+@mixin lead-ad-list-item-checkmark {
+    max-width: 400px;
+    position: relative;
+    li:before {
+        background-image: url('../images/checkmark-blue.svg');
+        background-size:contain;
+        content:'';
+        height: 13px;
+        left: 0px;
+        margin-top: 5px;
+        position:absolute;
+        width: 13px;
+    }
+}
+
 
 /* start of lead-ad-6-secrets-lander */
 
@@ -48,11 +65,11 @@
 
 .lead-ad-nav {
     @include flex-align(center);
-    background-color: #2c3e50;
-    color: #ffffff;
     @include flex;
     @include flex-direction(row);
     @include flex-justify(space-between);
+    background-color: #2c3e50;
+    color: #ffffff;
     padding: 25px 50px;
     .lead-ad-logo {
         cursor: pointer;
@@ -71,45 +88,125 @@
     }
 }
 
-.lead-ad-hero {
+.lead-ad-hero-row {
     @include flex;
     @include flex-direction(column);
     @include flex-justify(center);
-    padding: 50px;
+    padding: 25px 100px 50px 100px;
     .lead-ad-header {
         border-bottom: 2px solid #2c3e50;
         font-size: 40px;
         font-weight: 700;
-        padding-bottom: 15px;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .lead-ad-webinar-info-row {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-justify(center);
+    }
+    .lead-ad-webinar-subheader {
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: 700;
         text-align: center;
     }
     .lead-ad-about-miro {
         @include flex;
         @include flex-direction(column);
+        margin-right: 10%;
         width: 30%;
     }
     .lead-ad-miro-img {
         border: 3px solid #2c3e50;
         border-radius: 50%;
-        height: 200px;
-        margin: 0 auto;
-        width: 200px;
+        height: 190px;
+        margin: 0 auto 15px auto;
+        width: 195px;
     }
-    .lead-ad-miro-blurb {}
+    .lead-ad-miro-blurb {
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        width: 295px;
+    }
     .lead-ad-MIT-logo {
         width: 40px;
     }
+    .lead-ad-webinar-info {
+        @include flex;
+        @include flex-direction(column);
+        width: 40%;
+    }
+    .lead-ad-webinar-blurb {
+        border-bottom: 2px solid #eaeaea;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    .lead-ad-webinar-list {
+        @include lead-ad-list-item-checkmark;
+        margin: 0 auto;
+        padding-left: 20px;
+        position: relative;
+    }
+    .lead-ad-list-item {
+        margin-bottom: 10px;
+    }
+}
+
+.lead-ad-news-row {
+    background-color: #2c3e50;
+    padding: 50px;
+    .lead-ad-news-header {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .lead-ad-news-icons-row {
+        @include flex;
+        @include flex-align(center);
+        @include flex-direction(row);
+        @include flex-justify(center);
+
+    }
+    .lead-ad-news-icons {
+    }
 
 }
 
-.lead-ad-news-icons {
-
-}
-
-.lead-ad-schedule-call {
-
+.lead-ad-schedule-call-row {
+    padding: 50px 200px;
+    text-align: center;
+    .lead-ad-schedule-call-header {
+        border-bottom: 2px solid #eaeaea;
+        font-size: 24px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        font-weight: 700;
+    }
+    .lead-ad-schedule-call-subheader {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .lead-ad-call-scheduler {
+        margin: 0 auto;
+    }
 }
 
 .lead-ad-footer {
+    @include flex;
+    @include flex-align(center);
+    @include flex-justify(flex-end);
+    background-color: #2c3e50;
+    .lead-ad-logo {
+        cursor: pointer;
+        padding: 25px 50px;
+        width: 150px;
+    }
 
 }

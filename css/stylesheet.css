@@ -1,4 +1,5 @@
 /* mixins */
+/* mixin for checkmarks in pricing section */
 /* start of lead-ad-6-secrets-lander */
 .lead-ad-6-secrets-lander {
   font-family: 'Roboto', sans-serif;
@@ -10,8 +11,6 @@
   -ms-align-items: center;
   -moz-align-items: center;
   align-items: center;
-  background-color: #2c3e50;
-  color: #ffffff;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: -moz-flex;
@@ -24,6 +23,8 @@
   -ms-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
+  background-color: #2c3e50;
+  color: #ffffff;
   padding: 25px 50px; }
   .lead-ad-nav .lead-ad-logo {
     cursor: pointer;
@@ -38,7 +39,7 @@
       background-color: #f7931e;
       border: solid 2px #f7931e; }
 
-.lead-ad-hero {
+.lead-ad-hero-row {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: -moz-flex;
@@ -51,14 +52,33 @@
   -ms-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-  padding: 50px; }
-  .lead-ad-hero .lead-ad-header {
+  padding: 25px 100px 50px 100px; }
+  .lead-ad-hero-row .lead-ad-header {
     border-bottom: 2px solid #2c3e50;
     font-size: 40px;
     font-weight: 700;
-    padding-bottom: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
     text-align: center; }
-  .lead-ad-hero .lead-ad-about-miro {
+  .lead-ad-hero-row .lead-ad-webinar-info-row {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center; }
+  .lead-ad-hero-row .lead-ad-webinar-subheader {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center; }
+  .lead-ad-hero-row .lead-ad-about-miro {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: -moz-flex;
@@ -67,12 +87,112 @@
     -ms-flex-direction: column;
     -moz-flex-direction: column;
     flex-direction: column;
+    margin-right: 10%;
     width: 30%; }
-  .lead-ad-hero .lead-ad-miro-img {
+  .lead-ad-hero-row .lead-ad-miro-img {
     border: 3px solid #2c3e50;
     border-radius: 50%;
-    height: 200px;
-    margin: 0 auto;
-    width: 200px; }
-  .lead-ad-hero .lead-ad-MIT-logo {
+    height: 190px;
+    margin: 0 auto 15px auto;
+    width: 195px; }
+  .lead-ad-hero-row .lead-ad-miro-blurb {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    width: 295px; }
+  .lead-ad-hero-row .lead-ad-MIT-logo {
     width: 40px; }
+  .lead-ad-hero-row .lead-ad-webinar-info {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    width: 40%; }
+  .lead-ad-hero-row .lead-ad-webinar-blurb {
+    border-bottom: 2px solid #eaeaea;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    text-align: center; }
+  .lead-ad-hero-row .lead-ad-webinar-list {
+    max-width: 400px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 20px;
+    position: relative; }
+    .lead-ad-hero-row .lead-ad-webinar-list li:before {
+      background-image: url("../images/checkmark-blue.svg");
+      background-size: contain;
+      content: '';
+      height: 13px;
+      left: 0px;
+      margin-top: 5px;
+      position: absolute;
+      width: 13px; }
+  .lead-ad-hero-row .lead-ad-list-item {
+    margin-bottom: 10px; }
+
+.lead-ad-news-row {
+  background-color: #2c3e50;
+  padding: 50px; }
+  .lead-ad-news-row .lead-ad-news-header {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center; }
+  .lead-ad-news-row .lead-ad-news-icons-row {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center; }
+
+.lead-ad-schedule-call-row {
+  padding: 50px 200px;
+  text-align: center; }
+  .lead-ad-schedule-call-row .lead-ad-schedule-call-header {
+    border-bottom: 2px solid #eaeaea;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-weight: 700; }
+  .lead-ad-schedule-call-row .lead-ad-schedule-call-subheader {
+    font-size: 18px;
+    font-weight: 300; }
+  .lead-ad-schedule-call-row .lead-ad-call-scheduler {
+    margin: 0 auto; }
+
+.lead-ad-footer {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+  background-color: #2c3e50; }
+  .lead-ad-footer .lead-ad-logo {
+    cursor: pointer;
+    padding: 25px 50px;
+    width: 150px; }
