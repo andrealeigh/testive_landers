@@ -36,13 +36,28 @@
     justify-content: $direction;
 }
 
-/* mixin for checkmarks in pricing section */
+/* mixins for checkmarks in list items */
 
-@mixin lead-ad-list-item-checkmark {
+@mixin lead-ad-list-item-checkmark-blue {
     max-width: 400px;
     position: relative;
     li:before {
         background-image: url('../images/checkmark-blue.svg');
+        background-size:contain;
+        content:'';
+        height: 13px;
+        left: 0px;
+        margin-top: 5px;
+        position:absolute;
+        width: 13px;
+    }
+}
+
+@mixin lead-ad-list-item-checkmark-orange {
+    max-width: 400px;
+    position: relative;
+    li:before {
+        background-image: url('../images/checkmark-orange.svg');
         background-size:contain;
         content:'';
         height: 13px;
@@ -58,8 +73,9 @@
 
 
 .lead-ad-6-secrets-lander {
-    font-family: 'Roboto', sans-serif;
     color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -94,11 +110,15 @@
     @include flex-justify(center);
     padding: 25px 100px 50px 100px;
     .lead-ad-header {
-        border-bottom: 2px solid #2c3e50;
         font-size: 40px;
         font-weight: 700;
+        text-align: center;
+    }
+    .lead-ad-subheader {
+        border-bottom: 2px solid #2c3e50;
+        font-size: 14px;
         margin-bottom: 25px;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
         text-align: center;
     }
     .lead-ad-webinar-info-row {
@@ -107,7 +127,7 @@
         @include flex-justify(center);
     }
     .lead-ad-webinar-subheader {
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 15px;
         font-weight: 700;
         text-align: center;
@@ -121,18 +141,17 @@
     .lead-ad-miro-img {
         border: 3px solid #2c3e50;
         border-radius: 50%;
-        height: 190px;
+        height: 180px;
         margin: 0 auto 15px auto;
-        width: 195px;
+        width: 185px;
     }
     .lead-ad-miro-blurb {
-        font-size: 16px;
         font-weight: 300;
         text-align: center;
-        width: 295px;
+        max-width: 295px;
     }
     .lead-ad-MIT-logo {
-        width: 40px;
+        max-width: 40px;
     }
     .lead-ad-webinar-info {
         @include flex;
@@ -141,29 +160,31 @@
     }
     .lead-ad-webinar-blurb {
         border-bottom: 2px solid #eaeaea;
-        font-size: 16px;
         font-weight: 300;
         margin-bottom: 10px;
         padding-bottom: 5px;
         text-align: center;
     }
     .lead-ad-webinar-list {
-        @include lead-ad-list-item-checkmark;
+        @include lead-ad-list-item-checkmark-blue;
         margin: 0 auto;
         padding-left: 20px;
         position: relative;
     }
     .lead-ad-list-item {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+    }
+    .lead-ad-list-item:last-of-type {
+        margin-bottom: 0px;
     }
 }
 
-.lead-ad-news-row {
+.lead-ad-about-testive-row {
     background-color: #2c3e50;
     padding: 50px;
     .lead-ad-news-header {
-        color: #ffffff;
-        font-size: 24px;
+        color: #F7931E;
+        font-size: 22px;
         font-weight: 700;
         text-align: center;
     }
@@ -172,26 +193,78 @@
         @include flex-align(center);
         @include flex-direction(row);
         @include flex-justify(center);
-
     }
     .lead-ad-news-icons {
+        padding: 25px 25px 50px 25px;
     }
+    .lead-ad-testive-info {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-justify(center);
 
-}
+    }
+    .lead-ad-molly-video {
+        background-color: #ffffff;
+        width: 550px;
+        height: 400px;
+        margin-right: 7%;
+        max-width: 43%;
+    }
+    .lead-ad-about-testive-column {
+        color: #ffffff;
+        font-weight: 300;
+        text-align: left;
+        max-width: 37%;
+    }
+    .lead-ad-about-testive-header {
+        border-bottom: solid 1px #f7931e;
+        color: #F7931E;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    .lead-ad-about-testive-blurb {
+        margin-bottom: 10px;
+    }
+    .lead-ad-about-testive-list-header {
+        color: #F7931E;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .lead-ad-testive-list {
+        @include lead-ad-list-item-checkmark-orange;
+        margin: 0 auto;
+        padding-left: 20px;
+        position: relative;
+    }
+    .lead-ad-testive-list-item {
+        margin-bottom: 15px;
+    }
+    .lead-ad-testive-list-item:last-of-type {
+        margin-bottom: 0px;
+    }}
 
 .lead-ad-schedule-call-row {
     padding: 50px 200px;
     text-align: center;
     .lead-ad-schedule-call-header {
         border-bottom: 2px solid #eaeaea;
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 15px;
         padding-bottom: 10px;
         font-weight: 700;
     }
+    .lead-ad-schedule-call-blurb {
+        max-width: 700px;
+        margin: 0 auto 10px auto;
+        text-align: center;
+    }
     .lead-ad-schedule-call-subheader {
+        color: #F7931E;
+        font-weight: 700;
         font-size: 18px;
-        font-weight: 300;
+        margin: 0 auto 10px auto;
+        text-align: center;
     }
     .lead-ad-call-scheduler {
         margin: 0 auto;
@@ -208,5 +281,77 @@
         padding: 25px 50px;
         width: 150px;
     }
+
+}
+
+@media only screen and (max-width: 893px) {
+    .lead-ad-hero-row {
+        padding: 25px 50px 50px 50px;
+        .lead-ad-webinar-subheader {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .lead-ad-miro-img {
+            margin-bottom: 10px;
+        }
+        .lead-ad-miro-blurb {
+            font-size: 14px;
+            margin: 0 auto;
+        }
+        .lead-ad-webinar-blurb {
+            font-size: 12px;
+            margin: 0 auto;
+        }
+        .lead-ad-list-item {
+            font-size: 14px;
+        }
+    }
+
+    .lead-ad-news-row {
+        .lead-ad-news-header {
+            font-size: 18px;
+        }
+    }
+
+    .lead-ad-schedule-call-row {
+        .lead-ad-schedule-call-header {
+            font-size: 18px;
+        }
+        .lead-ad-schedule-call-subheader {
+            font-size: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 709px) {
+    .lead-ad-nav {
+        padding: 15px 10px;
+    }
+    .lead-ad-hero-row {
+        padding: 15px 10px;
+        .lead-ad-header {
+            border-bottom: 1px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .lead-ad-webinar-info-row {
+             flex-direction: column-reverse;
+         }
+        .lead-ad-about-miro {
+            margin: 0 auto;
+            width: 100%;
+        }
+        .lead-ad-webinar-info {
+            border-bottom: 2px solid #eaeaea;
+            margin: 0 auto 10px auto;
+            width: 100%;
+        }
+        .lead-ad-webinar-blurb {
+        }
+        .lead-ad-webinar-list {
+            max-width: 310px;
+        }
+    }
+
 
 }
